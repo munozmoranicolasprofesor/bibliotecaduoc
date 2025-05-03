@@ -26,6 +26,10 @@ public class LibroService {
         return libroRepository.buscarPorId(id);
     }
 
+    public Libro getLibroIsbn(String isbn){
+        return libroRepository.buscarPorIsbn(isbn);
+    }
+
     public Libro updateLibro(Libro libro){
         return libroRepository.actualizar(libro);
     }

@@ -41,6 +41,11 @@ public class LibroController {
         return libroService.getLibroId(id);
     }
 
+    @GetMapping("isbn/{isbn}")
+    public Libro buscarLibroIsbn(@PathVariable String isbn){
+        return libroService.getLibroIsbn(isbn);
+    }
+
     @PutMapping("{id}")
     public Libro actualizarLibro(@PathVariable int id, @RequestBody Libro libro){
         return libroService.updateLibro(libro);
